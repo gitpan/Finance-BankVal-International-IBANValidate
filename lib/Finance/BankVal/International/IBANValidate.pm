@@ -12,7 +12,7 @@ use JSON;
 require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(ibanValidate new);
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my $format;		#response return format i.e. xml json csv
 my $iban;          	#the IBAN to be validated
@@ -248,6 +248,20 @@ in the I<InternationalLoginConfig.txt> file bundled with this module.
 None by default.
 &ibanValidate is exported on request i.e. "use Finance::BankVal::International::IBANValidate qw(&ibanValidate);"
 
+=head1 DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+use LWP::UserAgent;
+use XML::Simple;
+use JSON;
+
+Crypt::SSLeay is also required as it is a dependency of LWP::UserAgent.
+
+Crypt::SSLeay is typically bundled with windows Perl ports, however on *nix you may need to install it by:
+
+sudo aptitude install libssl-dev (might not be neccessary and can be removed after install)
+sudo cpan -i Crypt::SSLeay
 
 =head1 SEE ALSO
 

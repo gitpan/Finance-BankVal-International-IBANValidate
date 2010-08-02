@@ -1,4 +1,4 @@
-Finance-BankVal-International-IBANValidate version 0.01
+Finance-BankVal-International-IBANValidate version 0.02
 =======================================================
 
 This module handles all of the restful web service calls to Unified Software's
@@ -15,7 +15,7 @@ To install this module type the following:
    make test
    make install
 
-or just copy the .pm file to your PERL lib
+or just copy the .pm file to your PERL lib and ensure all of the dependencies listed below are installed.
 
 The exportable method &ibanValidate(); takes a number of parameters including;
 
@@ -82,6 +82,14 @@ This module requires these other modules and libraries:
 use LWP::UserAgent;
 use XML::Simple;
 use JSON;
+
+Crypt::SSLeay is also required as it is a dependency of LWP::UserAgent.
+
+Crypt::SSLeay is typically bundled with windows Perl ports, however on *nix you may need to install it by:
+
+sudo aptitude install libssl-dev (might not be neccessary and can be removed after install)
+sudo cpan -i Crypt::SSLeay
+
 
 AUTHOR
 
