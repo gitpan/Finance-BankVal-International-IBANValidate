@@ -5,7 +5,5 @@ Revision history for Perl extension Finance::BankVal::International::IBANValidat
 		-AX -b 5.8.0 Finance::BankVal::International::IBANValidate
 0.02  Mon Aug  2 10:20:00 2010
 	- updated makefile to iclude dependency on Crypt::SSLeay
-0.03  Mon Aug  2 12:00:00 2010
-	- removed worldwritables
 0.04  Sun Aug 8 20:03:00 2010
 	- Altered permissions
