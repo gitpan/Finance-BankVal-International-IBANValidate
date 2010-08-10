@@ -12,7 +12,7 @@ use JSON;
 require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(ibanValidate new);
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 my $format;		#response return format i.e. xml json csv
 my $iban;          	#the IBAN to be validated
